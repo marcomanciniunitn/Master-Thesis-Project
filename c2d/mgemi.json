@@ -1,0 +1,144 @@
+{
+   "tasks": [
+      {
+         "table": "purchase",
+         "operation": "insert",
+         "predicate_argument": [
+            {
+               "predicate": "buy",
+               "argument": "shoe"
+            }
+         ],
+
+         "task_tree": {
+            "id": "purchase",
+            "table": "purchase",
+            "operation": "insert",
+            "frame_priority": 3,
+
+            "predicate_argument": [{
+                  "predicate": "buy",
+                  "argument": "shoe"
+            }],
+
+            "slots": [
+               [
+                  "quantity",
+                  "customer",
+                  "shoe"
+               ]
+            ],
+
+            "priorities": {
+               "quantity": 1,
+               "customer": 2
+            },
+
+            "dependencies": {
+               "id":[
+                  "id",
+                  "quantity",
+                  "customer",
+                  "shoe"
+               ],
+               "quantity": [
+                  "id"
+               ],
+               "customer": [
+                  "id"
+               ],
+               "shoe": [
+                  "id"
+               ]
+            },
+
+            "children": [
+               {
+                  "id": "stock[purchase]",
+                  "table": "stock",
+                  "operation": "select",
+                  "frame_priority": 2,
+
+                  "predicate_argument": [{
+                     "predicate": "pick",
+                     "argument": "stock"
+                  }],
+
+                  "slots":[
+                     [
+                        "width",
+                        "size_us",
+                        "shoe_id"
+                     ],
+                     [
+                        "size_us",
+                        "shoe_id",
+                        "own"
+                     ]
+                  ],
+
+                  "priorities": {
+                     "width": 1,
+                     "size_us": 2
+                  },
+
+                  "depedencies": {
+                     "width": [
+                        "id"
+                     ],
+                     "size_us": [
+                        "id"
+                     ],
+                     "shoe_id": [
+                        "id"
+                     ]
+                  },
+
+                  "children": [
+                     {
+                        "id": "shoe[stock[purchase]]",
+                        "table": "shoe",
+                        "operation": "select",
+                        "frame_priority": 1,
+
+                        "predicate_argument": [{
+                           "predicate": "search",
+                           "argument": "shoe"
+                        }],
+
+                        "slots":[
+                           [
+                              "gender",
+                              "basic_color",
+                              "category"
+                           ]
+                        ],
+
+                        "priorities":{
+                           "gender": 1,
+                           "basic_color": 3,
+                           "category": 2
+                        },
+
+                        "children":[],
+
+                        "dependencies": {
+                           "gender": [
+                              "category",
+                              "id"
+                           ],
+                           "basic_color": [
+                              "id"
+                           ],
+                           "category": [
+                              "id"
+                           ]
+                        }
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   ]
+}

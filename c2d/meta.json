@@ -1,0 +1,237 @@
+[
+  {
+    "table_name": "movie",
+    "pkey": "id",
+    "columns": [
+      {
+        "column_name": "id",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "title",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "genre",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "director",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "plot",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "actor",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "rating",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "cast",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      }
+    ]
+  },
+  {
+    "table_name": "screening",
+    "pkey": "id",
+    "columns": [
+      {
+        "column_name": "id",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "time",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "date",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "price",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "room",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "fk_movie",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false,
+        "refs": {
+          "table": "movie",
+          "column": "id"
+        }
+      },
+      {
+        "column_name": "fk_theater",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false,
+        "refs": {
+          "table": "theater",
+          "column": "id"
+        }
+      }
+    ]
+  },
+  {
+    "table_name": "theater",
+    "pkey": "id",
+    "columns": [
+      {
+        "column_name": "id",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "name",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "chain",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "city",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "address",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      }
+    ]
+  },
+  {
+    "table_name": "ticket",
+    "pkey": "id",
+    "columns": [
+      {
+        "column_name": "id",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "fk_ticket_purchase",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false,
+        "refs": {
+          "table": "ticket_purchase",
+          "column": "id"
+        }
+      }
+    ]
+  },
+  {
+    "table_name": "ticket_purchase",
+    "pkey": "id",
+    "columns": [
+      {
+        "column_name": "id",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "number_of_kids",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "number_of_tickets",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "customer_name",
+        "type": {
+          "data_type": "text"
+        },
+        "has_default": false
+      },
+      {
+        "column_name": "fk_screening",
+        "type": {
+          "data_type": "int"
+        },
+        "has_default": false,
+        "refs": {
+          "table": "screening",
+          "column": "id"
+        }
+      }
+    ]
+  }
+]

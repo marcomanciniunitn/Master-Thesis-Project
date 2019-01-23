@@ -1,0 +1,4 @@
+{
+	"goal":"You want to make a restaurant reservation",
+	"slots": {"cuisine":"italian", "location":"north", "people":"UNK", "price":"moderate"}
+}

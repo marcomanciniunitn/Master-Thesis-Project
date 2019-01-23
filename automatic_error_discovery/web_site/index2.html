@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Feedback experiment</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+
+
+    .msg_user {
+		position: relative;
+		background: #00aabb;
+		border-radius: .4em;
+		padding: 2%;
+	}
+
+	.msg_user:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 0;
+		height: 0;
+		border: 31px solid transparent;
+		border-right-color: #00aabb;
+		border-left: 0;
+		border-top: 0;
+		margin-top: -15.5px;
+		margin-left: -31px;
+	}
+
+      
+
+    </style>
+    <script type="text/javascript">
+    	const user = "user" + Math.floor(Math.random() * 100)
+
+    	belief = {"cuisine": "UNK", "location": "UNK", "people": "UNK", "price": "UNK"}
+
+    	$.ajax({
+		    type : "POST",
+		    url : "dump_belief.php",
+		    data : {
+		        belief : JSON.stringify(belief),
+		        user_id : user
+		    }
+		});
+
+
+    	$.ajaxSetup({
+    		cache: false
+		});
+    	
+    	console.log(user)
+
+    	function end(){
+    		var url = 'end.php';
+			var form = $('<form action="' + url + '" method="post">' +
+			  '<input type="text" name="user_id" value="' + user + '" />' +
+			  '</form>');
+			$('body').append(form);
+			form.submit();
+
+    	}
+
+    function tableCreate(goal, slots ) {
+
+      var tbl = document.createElement('table');
+      tbl.style.fontSize = "20pt";
+      tbl.style.margin = "auto"
+
+      
+      var tbdy = document.createElement('tbody');
+
+      //slots head
+      	var tr_head = document.createElement('tr');
+      	var th_head = document.createElement('th');
+      	th_head.colSpan = 2;
+
+        var tr_goal = document.createElement('tr');
+        var td_goal = document.createElement('td');
+        td_goal.appendChild(document.createTextNode("Overall"))
+
+        var td_goal_text = document.createElement('td');
+
+        td_goal_text.appendChild(document.createTextNode(goal))
+
+
+        //tr_goal.appendChild(td_goal);
+        tr_goal.appendChild(td_goal_text);
+
+
+        tbdy.appendChild(tr_goal);
+
+        var tr_head_slots = document.createElement('tr');
+      	var th_head_slotname = document.createElement('th');
+      	var th_head_slotval = document.createElement('th');
+
+        th_head_slotname.appendChild(document.createTextNode("Information"));
+        th_head_slotval.appendChild(document.createTextNode("Value"));
+      	tr_head_slots.appendChild(th_head_slotname);
+      	tr_head_slots.appendChild(th_head_slotval);
+      	tbdy.appendChild(tr_head_slots);
+
+        for (var slot in slots){
+        	var tr_slot = document.createElement('tr');
+        	var td_slotname = document.createElement('td');
+        	var td_slotval = document.createElement('td');
+
+        	td_slotname.appendChild(document.createTextNode(slot))
+        	slot_val = document.createTextNode(slots[slot])
+        		
+        	
+
+        	td_slotval.appendChild(slot_val)
+        	if (slots[slot] == "UNK"){
+        		
+        		td_slotval.style.color = "red"
+        		
+        	}else{
+        		
+
+        		td_slotval.style.color = "green"
+        	}
+        	tr_slot.appendChild(td_slotname)
+        	tr_slot.appendChild(td_slotval)
+
+        	tbdy.appendChild(tr_slot)
+
+
+        }
+
+      tbl.appendChild(tbdy);
+      div = document.getElementById("goal_table")
+
+      div.appendChild(tbl)
+      return tbl
+    }
+
+    function sendMessageClient(string, user){
+
+    	headers = { 'Content-Type': 'application/json'}
+
+
+   
+           data = { "version" : "1.0",
+       				"sessionId" : "1",
+       				"application" : {"applicationId": "api.vui.appId.1234"},
+       				"user" : {"userId": user , "accessToken": "abc123", "telephoneNumber":"+11112345678"},
+       				"request": {"utterance":  string },
+       				"turnId" : "api.vui.session.abc-123",
+       				"customerId" :"api.vui.session-abc-123"
+       			}
+
+       			$.ajax({
+	              type: "POST",
+	              url: "get_response.php",//url to file
+	              data: { data:JSON.stringify(data),
+	                },
+	              success: function(data){
+	              	resp = JSON.parse(data)
+	              	msg = resp['response']['outputSpeech']['text']
+
+			        textH = document.createTextNode("SYSTEM: " + msg)
+			    	p = document.createElement("p")
+			    	p.appendChild(textH)
+			    	p.style.fontSize = "18pt";
+			    	p.style.width="100%";
+
+			    	
+
+			    	
+			    	//p.classList = "msg_user"
+			    	document.getElementById("messages").appendChild(p)
+			    	document.getElementById("messages").appendChild(document.createElement("br"))
+			    	objDiv = document.getElementById("messages")
+			    	objDiv.scrollTop = objDiv.scrollHeight;
+			    	$('#messages').scrollTop($('#messages')[0].scrollHeight);
+			                  
+	                }
+
+              });
+
+    }
+
+    function beliefCreate(belief){
+      var tbl = document.createElement('table');
+      tbl.style.fontSize = "20pt";
+       tbl.style.margin = "auto"
+        var tbdy = document.createElement('tbody');
+        var tr_head_slots = document.createElement('tr');
+        var th_head_slotname = document.createElement('th');
+        var th_head_slotval = document.createElement('th');
+
+        th_head_slotname.appendChild(document.createTextNode("Information"));
+        th_head_slotval.appendChild(document.createTextNode("Value"));
+      	tr_head_slots.appendChild(th_head_slotname);
+      	tr_head_slots.appendChild(th_head_slotval);
+      	tbdy.appendChild(tr_head_slots);
+
+        for (var slot in belief){
+        	var tr_slot = document.createElement('tr');
+        	var td_slotname = document.createElement('td');
+        	var td_slotval = document.createElement('td');
+
+        	td_slotname.appendChild(document.createTextNode(slot))
+        	slot_val = document.createTextNode(belief[slot])
+        		
+        	
+
+        	td_slotval.appendChild(slot_val)
+        	if (belief[slot] == "UNK"){
+        		
+        		td_slotval.style.color = "red"
+        		
+        	}else{
+        		
+
+        		td_slotval.style.color = "green"
+        	}
+        	tr_slot.appendChild(td_slotname)
+        	tr_slot.appendChild(td_slotval)
+
+        	tbdy.appendChild(tr_slot)
+
+
+        }
+
+      tbl.appendChild(tbdy);
+      div = document.getElementById("belief_table")
+      div.removeChild(div.lastChild);
+      div.appendChild(tbl)
+      return tbl
+
+    }
+
+
+	function scrollToBottom() {
+		messages = document.getElementById('messages'); 
+	  messages.scrollTop = messages.scrollHeight;
+	}
+
+
+    function sendMessage(){
+    	msg = document.getElementById("message_txt").value
+    	if (msg != "") {
+
+    		$.ajax({
+	              type: "POST",
+	              url: "dump_message.php",//url to file
+	              data: { msg: msg,
+	              		user_id: user
+	                },
+	              success: function(data){
+	           			textH = document.createTextNode("USER: " + msg)
+				    	p = document.createElement("p")
+				    	p.appendChild(textH)
+				    	p.style.fontSize = "18pt";
+				    	p.style.width="auto";
+				    	//p.classList = "msg_user"
+
+				    	
+
+				    	
+				    	//p.classList = "msg_user"
+				    	document.getElementById("messages").appendChild(p)
+				    	document.getElementById("messages").appendChild(document.createElement("br"))
+
+				    	document.getElementById("message_txt").value = ""
+				    	//scrollToBottom()
+				    	sendMessageClient(msg, user)
+			                  
+	                }
+
+              });
+
+	    	
+	    	
+	    }else{
+	    	alert("Insert a message!")
+	    }
+    	
+
+    }
+
+      $(document).ready(function(){
+        $.getJSON( "users/goal1.json", function(data ) {
+
+            tableCreate(data['goal'], data['slots']) 
+            example1 = document.createTextNode("Example: I want to eat in an italian restaurant")
+            example2 = document.createTextNode("Example: I want a moderate restaurant in north")
+            h4 = document.createElement("h4")
+
+            h4.appendChild(example1)
+            h4.appendChild(document.createElement("br"))
+            h4.appendChild(example2)
+            h4.style.fontWeight="normal"
+
+            document.getElementById("goal_table").appendChild(h4)
+
+    
+        });
+
+        setInterval(function() {
+       	//scrollToBottom();
+        $.getJSON('users/' + user + '.json', function(sl) {
+           
+           beliefCreate(sl)
+          
+
+            //document.getElementById("belief_ta").appendChild(h4)
+
+        });
+    }, 500);
+
+
+       
+
+      });
+
+    </script>
+  </head>
+
+  <body class="container-fluid" style="padding: 2%">
+
+    <div class="row" style="margin-left: 15%">
+      <div class="col" style="border-width: medium;">
+        <h2> <mark style="font-weight: normal; background: none"> In this experiment you are going to interact with a spoken dialogue system, </mark> trying to reach a specific goal. <br> <mark style="font-weight: normal; background: none"> If, at any time, you feel like the agent </mark> is NOT helping you <mark style="font-weight: normal; background: none"> reaching the goal,</mark> press the STOP button <br>
+  	 	<mark style="font-weight: normal; background: none"> If you reach the end of the conversations without problems click on </mark> COMPLETED</h2>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    
+    <div class="row " >
+ 
+		
+      	<div class="col-lg table-bordered thead-dark"  id="goal_table" style="margin-left: 30px" >
+          	<h4 style="font-weight: normal; margin-left: 20px"> This is your <mark style="font-weight: bold; background: none"> overall goal </mark>. <br>  Slot values in <mark   style="color: green;  background: none"> green </mark> must be communicated <mark style="font-weight: bold"> exactly  </mark> as you read them.<br><mark style="color: red; background: none">Red </mark> values can be provided with any value  </h4>
+         </div>
+         
+
+  
+
+
+         
+         <div class="col-lg table-bordered thead-dark" id="belief_table" style="margin-left: 40px">
+         <h4 style="font-weight: normal; margin-left: 20px">
+         	This is the <mark style="font-weight: bold;  background: none"> belief </mark> of the system. <br>  Slot values in <mark  style="color: green;  background: none"> green </mark> are known to the system.
+         	<br><mark style="color: red; background: none">Red </mark> values are unknown to the system.
+         	<br><br>  These values will be updated during the interaction. <br>Check it <mark style="font-weight: bold; background: none"> at each turn </mark> to understand if the system guide you properly
+         </h4>
+         
+
+         </div>
+
+      
+     
+    </div>
+    <br>
+    <br>
+    
+    <h2  style="margin-left:25%;" > Interaction </h2>
+        
+    <div class="row table-bordered"  style="margin-left:25%;  margin-right: 25%; height:400px; border-color: black; border-width: 8px; overflow-y: scroll;" >
+    	<div id="messages" style="width: auto;">
+    	</div>
+
+    </div>
+
+
+    <div class="row" style="margin-left:25%; ">
+      
+      
+        <input type="text" id="message_txt" class="form-control" style="width:56%; height: 50px; font-size: 25px" placeholder="Write something" size="30"/>
+        <button type="submit" id="send-msg" class="btn btn-primary" onclick="sendMessage()" style="width:10%; font-size:20px">Send</button>
+        
+      
+   
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="row text-center" style="margin-left:30px">
+
+    	<button type="submit" class="btn btn-danger " id="stop-inter" style="width:10%; height:50px; margin: auto" onclick="end()">STOP</button>
+
+    	<button type="submit" class="btn btn-success " id="ok-inter" style="width:10%; height:50px; margin: auto" onclick="end()">COMPLETED</button>
+
+    </div>
+
+    <br>
+    <br>
+
+    
+
+
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

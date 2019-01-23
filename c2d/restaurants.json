@@ -1,0 +1,139 @@
+{
+   "tasks":[
+      {
+         "table": "reservation",
+         "operation": "insert",
+         "predicate_argument": [
+            {
+               "predicate": "book",
+               "argument": "table"
+            }
+         ],
+
+         "task_tree": {
+
+            "id":"reservation",
+            "table":"reservation",
+            "operation":"insert",
+            "frame_priority": 3,
+
+            "predicate_argument": [{
+               "predicate": "book",
+               "argument": "table"
+            }],
+
+            "slots": [
+               ["date", "time", "people", "booker", "fkey_restaurant"]
+            ],
+
+            "requestables": [],
+
+            "priorities": {
+               "date": 1,
+               "time": 2,
+               "people": 3,
+               "booker": 4
+            },
+
+            "dependencies": {
+               "id": [
+                  "date",
+                  "time",
+                  "people",
+                  "booker",
+                  "fkey_restaurant",
+                  "id"
+               ]
+            },
+            
+            "children": [
+               {
+                  "id": "restaurant[reservation]",
+                  "table": "restaurant",
+                  "operation": "select",
+                  "frame_priority": 2,
+
+                  "predicate_argument": [{
+                     "predicate": "search",
+                     "argument": "restaurant"
+                  }],
+
+                  "slots": [
+                     ["name", "fkey_location"],
+                     ["cuisine","fkey_location"],
+                     ["price_range", "fkey_location"],
+                     ["atmosphere", "fkey_location"]
+                  ],
+
+                  "requestables": ["rating", "address", "phone"],
+
+                  "priorities": {
+                     "name": 1,
+                     "cuisine": 2,
+                     "price_range": 3,
+                     "cuisine": 4,
+                     "atmosphere": 5
+                  },
+
+                  "dependencies": {
+                     "name": [
+                        "cuisine",
+                        "rating",
+                        "price_range",
+                        "atmosphere"
+                     ],
+                     "id": [
+                        "name",
+                        "cuisine",
+                        "rating",
+                        "price_range",
+                        "atmosphere",
+                        "fkey_location",
+                        "id"
+                     ]
+                  },
+
+                  "children": [
+                     {
+                        "id": "location[restaurant[reservation]]",
+                        "table": "location",
+                        "operation": "select",
+                        "frame_priority": 1,
+                        
+                        "predicate_argument": [{
+                           "predicate": "find",
+                           "argument": "location"
+                        }],
+
+                        "slots":[
+                           ["city", "area"]
+                        ],
+
+                        "requestables": [],
+
+                        "priorities":{
+                           "city": 1,
+                           "area": 2
+                        },
+
+                        "dependencies": {
+                           "city": [
+                              "area"
+                           ],
+                           "id": [
+                              "state",
+                              "city",
+                              "area",
+                              "id"
+                           ]
+                        },
+                        
+                        "children": []
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   ]
+}

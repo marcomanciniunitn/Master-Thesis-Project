@@ -1,0 +1,20 @@
+.msg_user {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.msg_user:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 34px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -17px;
+	margin-left: -34px;
+}

@@ -1,0 +1,19 @@
+{
+    "tot_hours": "0",
+    "tot_minutes": "0",
+    "tot_seconds": "49.006",
+    "interation_hours": "0",
+    "interation_minutes": "0",
+    "interation_seconds": "38.874",
+    "turn_check_hours": "0",
+    "turn_check_minutes": "0",
+    "turn_check_seconds": "0",
+    "error_selection_hours": "0",
+    "error_selection_minutes": "0",
+    "error_selection_seconds": "10.132",
+    "user_id": "user_41",
+    "turns": 2,
+    "outcome": "ERRONEOUS",
+    "error_type": "NLU",
+    "task_category": "BL"
+}

@@ -1,0 +1,1 @@
+{"movie::actor": "?", "movie::director": "?", "movie::genre": "?", "movie::rating": "?", "movie::title": "?", "screening::date": "?", "screening::time": "?", "theater::chain": "?", "theater::city": "?", "theater::name": "?", "ticket_purchase::customer_name": "?", "ticket_purchase::number_of_kids": "?", "ticket_purchase::number_of_tickets": "?"}

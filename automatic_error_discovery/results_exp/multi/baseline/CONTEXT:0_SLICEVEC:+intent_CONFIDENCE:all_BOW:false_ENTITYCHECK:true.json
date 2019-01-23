@@ -1,0 +1,44 @@
+{
+  "random": {
+    "accuracy": "0.3077708006279435",
+    "precision": "0.19727891156462585",
+    "recall": "0.1582722832722833",
+    "f1": "0.15112781954887217"
+  },
+  "threshold": {
+    "accuracy": "0.34678178963893247",
+    "precision": "0.4424603174603175",
+    "recall": "0.42292429792429787",
+    "f1": "0.2962585034013605"
+  },
+  "majority": {
+    "accuracy": "0.8002354788069075",
+    "precision": "0.40011773940345374",
+    "recall": "0.5",
+    "f1": "0.44085133468592114"
+  },
+  "Logit": {
+    "accuracy": "0.8002354788069075",
+    "precision": "0.40011773940345374",
+    "recall": "0.5",
+    "f1": "0.44085133468592114"
+  },
+  "best": {
+    "models": [
+      "random",
+      "threshold",
+      "majority",
+      "Logit"
+    ],
+    "f1": 0.44085133468592114
+  },
+  "features": {
+    "slice_vec": [
+      "intent"
+    ],
+    "Confidence featurization": "all",
+    "BoW": false,
+    "Entity DB check": true,
+    "Context window": "0"
+  }
+}

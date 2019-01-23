@@ -1,0 +1,19 @@
+{
+    "tot_hours": "10",
+    "tot_minutes": "47",
+    "tot_seconds": "45.18699999999808",
+    "interation_hours": "10",
+    "interation_minutes": "47",
+    "interation_seconds": "45.18699999999808",
+    "turn_check_hours": "0",
+    "turn_check_minutes": "0",
+    "turn_check_seconds": "0",
+    "error_selection_hours": "0",
+    "error_selection_minutes": "0",
+    "error_selection_seconds": "0",
+    "user_id": "user_56",
+    "turns": 0,
+    "outcome": "None",
+    "error_type": "NONE",
+    "task_category": "BL"
+}

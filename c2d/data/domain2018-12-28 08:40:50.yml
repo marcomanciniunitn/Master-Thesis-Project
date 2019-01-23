@@ -1,0 +1,226 @@
+actions:
+- utter_ask_ticket_purchase::number_of_tickets
+- custom_actions2018-12-28 08:40:50.MultichoiceTicketPurchaseNumberOfTickets
+- utter_ask_ticket_purchase::number_of_kids
+- custom_actions2018-12-28 08:40:50.MultichoiceTicketPurchaseNumberOfKids
+- utter_ask_ticket_purchase::customer_name
+- custom_actions2018-12-28 08:40:50.MultichoiceTicketPurchaseCustomerName
+- utter_ask_screening::time
+- custom_actions2018-12-28 08:40:50.MultichoiceScreeningTime
+- utter_ask_screening::date
+- custom_actions2018-12-28 08:40:50.MultichoiceScreeningDate
+- custom_actions2018-12-28 08:40:50.AnswerQuestionAboutScreeningPrice
+- custom_actions2018-12-28 08:40:50.AnswerQuestionAboutScreeningRoom
+- utter_ask_movie::title
+- custom_actions2018-12-28 08:40:50.MultichoiceMovieTitle
+- utter_ask_movie::actor
+- custom_actions2018-12-28 08:40:50.MultichoiceMovieActor
+- utter_ask_movie::rating
+- custom_actions2018-12-28 08:40:50.MultichoiceMovieRating
+- utter_ask_movie::genre
+- custom_actions2018-12-28 08:40:50.MultichoiceMovieGenre
+- utter_ask_movie::director
+- custom_actions2018-12-28 08:40:50.MultichoiceMovieDirector
+- custom_actions2018-12-28 08:40:50.AnswerQuestionAboutMoviePlot
+- custom_actions2018-12-28 08:40:50.AnswerQuestionAboutMovieCast
+- utter_ask_theater::name
+- custom_actions2018-12-28 08:40:50.MultichoiceTheaterName
+- utter_ask_theater::city
+- custom_actions2018-12-28 08:40:50.MultichoiceTheaterCity
+- utter_ask_theater::chain
+- custom_actions2018-12-28 08:40:50.MultichoiceTheaterChain
+- custom_actions2018-12-28 08:40:50.AnswerQuestionAboutTheaterAddress
+- utter_ask_howcanhelp
+- utter_bye
+- custom_actions2018-12-28 08:40:50.BeginInsertTicketPurchaseTask
+- custom_actions2018-12-28 08:40:50.ResetDependenciesTheater
+- custom_actions2018-12-28 08:40:50.LookupTheater
+- custom_actions2018-12-28 08:40:50.ResetDependenciesMovie
+- custom_actions2018-12-28 08:40:50.LookupMovie
+- custom_actions2018-12-28 08:40:50.ProposeMovie
+- custom_actions2018-12-28 08:40:50.SaveChoiceMovie
+- custom_actions2018-12-28 08:40:50.TransferMoviePreferencesToScreening
+- custom_actions2018-12-28 08:40:50.ProposeTheater
+- custom_actions2018-12-28 08:40:50.SaveChoiceTheater
+- custom_actions2018-12-28 08:40:50.TransferTheaterPreferencesToScreening
+- custom_actions2018-12-28 08:40:50.ResetDependenciesScreening
+- custom_actions2018-12-28 08:40:50.LookupScreening
+- custom_actions2018-12-28 08:40:50.RelaxLastRequest
+- custom_actions2018-12-28 08:40:50.ProposeScreening
+- custom_actions2018-12-28 08:40:50.SaveChoiceScreening
+- custom_actions2018-12-28 08:40:50.TransferScreeningPreferencesToTicketPurchase
+- custom_actions2018-12-28 08:40:50.InsertTicketPurchase
+- custom_actions2018-12-28 08:40:50.CompleteInsertTicketPurchaseTask
+- custom_actions2018-12-28 08:40:50.Finalize
+- custom_actions2018-12-28 08:40:50.ReloadMovieOptions
+- custom_actions2018-12-28 08:40:50.ReloadTheaterOptions
+- custom_actions2018-12-28 08:40:50.RestoreScreeningPreferencesFromTicketPurchase
+- custom_actions2018-12-28 08:40:50.RestoreMoviePreferencesFromScreening
+- custom_actions2018-12-28 08:40:50.RepeatLastTurn
+- custom_actions2018-12-28 08:40:50.LoadPrevOptions
+- custom_actions2018-12-28 08:40:50.ReloadScreeningOptions
+- custom_actions2018-12-28 08:40:50.LoadHeadOptions
+- custom_actions2018-12-28 08:40:50.LoadMoreOptions
+entities:
+- ticket_purchase::number_of_tickets
+- ticket_purchase::number_of_kids
+- ticket_purchase::customer_name
+- ticket_purchase::fk_screening
+- screening::time
+- screening::date
+- screening::fk_movie
+- screening::fk_theater
+- movie::title
+- movie::actor
+- movie::rating
+- movie::genre
+- movie::director
+- theater::name
+- theater::city
+- theater::chain
+- ticket_purchase::id
+- screening::id
+- screening::price
+- screening::room
+- movie::id
+- movie::plot
+- movie::cast
+- theater::id
+- theater::address
+- user_choice
+intents:
+- request_ticket_purchase::number_of_tickets
+- request_ticket_purchase::number_of_kids
+- request_ticket_purchase::customer_name
+- request_screening::time
+- request_screening::date
+- ask_screening::price
+- ask_screening::room
+- request_movie::title
+- request_movie::actor
+- request_movie::rating
+- request_movie::genre
+- request_movie::director
+- ask_movie::plot
+- ask_movie::cast
+- request_theater::name
+- request_theater::city
+- request_theater::chain
+- ask_theater::address
+- greeting
+- inform
+- affirm
+- dontcare
+- thatsit
+- goodbye
+- ask
+- request
+- ask_to_repeat
+- ask_more_options
+- ask_prev_options
+- ask_head_options
+slots:
+  matches:
+    type: unfeaturized
+  movie::actor:
+    type: text
+  movie::cast:
+    type: unfeaturized
+  movie::director:
+    type: text
+  movie::genre:
+    type: text
+  movie::id:
+    type: unfeaturized
+  movie::plot:
+    type: unfeaturized
+  movie::rating:
+    type: text
+  movie::title:
+    type: text
+  queries:
+    type: unfeaturized
+  results_displayed:
+    type: unfeaturized
+  results_offsets:
+    type: unfeaturized
+  screening::date:
+    type: text
+  screening::fk_movie:
+    type: text
+  screening::fk_theater:
+    type: text
+  screening::id:
+    type: unfeaturized
+  screening::price:
+    type: unfeaturized
+  screening::room:
+    type: unfeaturized
+  screening::time:
+    type: text
+  theater::address:
+    type: unfeaturized
+  theater::chain:
+    type: text
+  theater::city:
+    type: text
+  theater::id:
+    type: unfeaturized
+  theater::name:
+    type: text
+  ticket_purchase::customer_name:
+    type: text
+  ticket_purchase::fk_screening:
+    type: text
+  ticket_purchase::id:
+    type: unfeaturized
+  ticket_purchase::number_of_kids:
+    type: text
+  ticket_purchase::number_of_tickets:
+    type: text
+  user_choice:
+    type: text
+templates:
+  utter_ask_howcanhelp:
+  - Hello, how can I help you?
+  utter_ask_movie::actor:
+  - Which movie's actor
+  - Please tell me the movie's actor
+  utter_ask_movie::director:
+  - Which movie's director
+  - Please tell me the movie's director
+  utter_ask_movie::genre:
+  - Which movie's genre
+  - Please tell me the movie's genre
+  utter_ask_movie::rating:
+  - Which movie's rating
+  - Please tell me the movie's rating
+  utter_ask_movie::title:
+  - Which movie's title
+  - Please tell me the movie's title
+  utter_ask_screening::date:
+  - Which screening's date
+  - Please tell me the screening's date
+  utter_ask_screening::time:
+  - Which screening's time
+  - Please tell me the screening's time
+  utter_ask_theater::chain:
+  - Which theater's chain
+  - Please tell me the theater's chain
+  utter_ask_theater::city:
+  - Which theater's city
+  - Please tell me the theater's city
+  utter_ask_theater::name:
+  - Which theater's name
+  - Please tell me the theater's name
+  utter_ask_ticket_purchase::customer_name:
+  - Which ticket purchase's customer name
+  - Please tell me the ticket purchase's customer name
+  utter_ask_ticket_purchase::number_of_kids:
+  - Which ticket purchase's number of kids
+  - Please tell me the ticket purchase's number of kids
+  utter_ask_ticket_purchase::number_of_tickets:
+  - Which ticket purchase's number of tickets
+  - Please tell me the ticket purchase's number of tickets
+  utter_bye:
+  - Goodbye

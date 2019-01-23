@@ -1,0 +1,180 @@
+{
+   "tasks":[
+      {
+         "table": "ticket_purchase",
+         "operation": "insert",
+         "predicate_argument": [
+            {
+               "predicate": "buy",
+               "argument": "ticket"
+            }
+         ],
+
+         "task_tree":
+         {
+            "id": "ticket_purchase",
+            "table": "ticket_purchase",
+            "operation": "insert",
+            "frame_priority": 4,
+
+            "predicate_argument": [{
+               "predicate": "buy",
+               "argument": "ticket"
+            }],
+
+            "slots":[
+               [
+                  "number_of_tickets",
+                  "number_of_kids",
+                  "customer_name",
+                  "fk_screening"
+               ]
+            ],
+
+            "requestables": [],
+
+            "priorities": {
+               "number_of_tickets": 1,
+               "number_of_kids": 2,
+               "customer_name": 3
+            },
+
+            "dependencies": {
+               "number_of_tickets": [
+                  "number_of_kids"
+               ],
+               "id": [
+                  "number_of_tickets",
+                  "number_of_kids",
+                  "customer_name",
+                  "fk_screening",
+                  "id"
+               ]
+            },
+
+            "children": [
+               {
+                  "id": "screening[ticket_purchase]",
+                  "table": "screening",
+                  "operation": "select",
+                  "frame_priority": 3,
+
+                  "predicate_argument": [],
+                  "slots": [ 
+                     [
+                        "time",
+                        "date",
+                        "fk_movie",
+                        "fk_theater"
+                     ]
+                  ],
+
+                  "requestables": ["price", "room"],
+
+                  "priorities": {
+                     "time": 2,
+                     "date": 1
+                  },
+
+                  "dependencies": {
+                     "date": [
+                        "time"
+                     ],
+                     "id": [
+                        "time",
+                        "date",
+                        "price",
+                        "fk_movie",
+                        "fk_theater",
+                        "id"
+                     ]
+                  },
+
+                  "children": [
+                     {
+                        "id": "movie[screening[ticket_purchase]]",
+                        "table": "movie",
+                        "operation": "select",
+                        "frame_priority": 1,
+
+                        "predicate_argument": [{
+                           "predicate": "buy",
+                           "argument": "ticket"
+                        }],
+
+                        "slots":[ 
+                           ["title"],
+                           ["actor"],
+                           ["rating", "genre"],
+                           ["director"]
+                        ],
+
+                        "requestables": ["plot", "cast"],
+
+                        "priorities":{
+                           "title": 1,
+                           "actor": 2,
+                           "genre": 3,
+                           "rating": 4,
+                           "director": 5
+                        },
+
+                        "dependencies":{
+                           "id":[
+                              "title",
+                              "rating",
+                              "genre",
+                              "actor",
+                              "director",
+                              "id"
+                           ]
+                        },
+
+                        "children":[]
+                     },
+                     {
+                        "id": "theater[screening[ticket_purchase]]",
+                        "table": "theater",
+                        "operation": "select",
+
+                        "predicate_argument": [{
+                           "predicate": "buy",
+                           "argument": "ticket"
+                        }],
+
+                        "slots": [ 
+                           ["name"],
+                           ["city"],
+                           ["chain"]
+                        ],
+
+                        "requestables": ["address"],
+
+                        "priorities": {
+                           "name": 1,
+                           "city": 2
+                        },
+
+                        "dependencies": {
+                           "name": [
+                              "chain",
+                              "city"
+                           ],
+                           "id": [
+                              "name",
+                              "chain",
+                              "city",
+                              "id"
+                           ]
+                        },
+
+                        "frame_priority": 2,
+                        "children": []
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   ]
+}

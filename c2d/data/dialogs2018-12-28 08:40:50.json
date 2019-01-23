@@ -1,0 +1,4096 @@
+{
+    "dialogs": [
+        {
+            "id": "0",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "add a ticket purchase for theaters having The Space Cinema Riccione name thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 42,
+                                "end": 67,
+                                "value": "The Space Cinema Riccione",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. understood. which movie's title"
+                    },
+                    "user": {
+                        "text": "can you search actor Matt Damon movies please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 21,
+                                "end": 31,
+                                "value": "Matt Damon",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: good will hunting, genre: drama, director: gus van sant, actor: matt damon, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "got it. let me save your preference. is this theater what you were looking for? [1. name: the space cinema riccione, chain: the space cinemas, city: riccione]."
+                    },
+                    "user": {
+                        "text": "yes",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "got it. let me save your preference. which screening's date"
+                    },
+                    "user": {
+                        "text": "date November 11 thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 5,
+                                "end": 16,
+                                "value": "November 11",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with date november 11. which screening's date"
+                    },
+                    "user": {
+                        "text": "alright. and do you have November 14 date instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 25,
+                                "end": 36,
+                                "value": "November 14",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with date november 14. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "anything will do",
+                        "intent": "dontcare",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "got it. please tell me the screening's time"
+                    },
+                    "user": {
+                        "text": "4 pm",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 4,
+                                "value": "4 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with time 4 pm. which screening's time"
+                    },
+                    "user": {
+                        "text": "oh ok. what about 10 pm instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 18,
+                                "end": 23,
+                                "value": "10 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "got it. is this screening what you were looking for? [1. time: 10 pm, date: november 08]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "i want number of tickets 1 please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 25,
+                                "end": 26,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "2 number of kids please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 1,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "i want customer name Giuliano Tortoreto thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 21,
+                                "end": 39,
+                                "value": "Giuliano Tortoreto",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "bye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "you have to make a ticket purchase. i would like movies with Bruno Ganz actor",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 61,
+                                "end": 71,
+                                "value": "Bruno Ganz",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. got it. is this movie what you were looking for? [1. title: downfall, genre: biography, director: oliver hirschbiegel, actor: bruno ganz, rating: r]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, look for movies with actor Ben Burtt instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 55,
+                                "end": 64,
+                                "value": "Ben Burtt",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: wall·e, genre: animation, director: andrew stanton, actor: ben burtt, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "look for screenings with time 10 am please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 30,
+                                "end": 35,
+                                "value": "10 am",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "ok. which theater's name"
+                    },
+                    "user": {
+                        "text": "name Seenema Milan please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 5,
+                                "end": 18,
+                                "value": "Seenema Milan",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with name seenema milan. which theater's name"
+                    },
+                    "user": {
+                        "text": "oh ok. and do you have MultiCinema Rimini name instead then",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 23,
+                                "end": 41,
+                                "value": "MultiCinema Rimini",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "alright. is this theater what you were looking for? [1. name: multicinema rimini, chain: multicinema circuit, city: rimini]."
+                    },
+                    "user": {
+                        "text": "no. i need to search theaters with AMC Cinema Pesaro name instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 35,
+                                "end": 52,
+                                "value": "AMC Cinema Pesaro",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with name amc cinema pesaro. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "i don't have a preference",
+                        "intent": "dontcare",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "understood. there are more than one theater with . here: [1. name: uci cinema trento, chain: uci cinema global, city: trento], [2. name: movie planet milan, chain: movie planet circuit, city: milan], [3. name: multicinema milan, chain: multicinema circuit, city: milan]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "no. find theaters with name Movie Planet Venezia instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 28,
+                                "end": 48,
+                                "value": "Movie Planet Venezia",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with name movie planet venezia. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "actually, look for theaters with UCI Cinema Napoli name instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 33,
+                                "end": 50,
+                                "value": "UCI Cinema Napoli",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with name uci cinema napoli. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "i don't have a preference",
+                        "intent": "dontcare",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "got it. there are more than one theater with . here: [1. name: uci cinema trento, chain: uci cinema global, city: trento], [2. name: movie planet milan, chain: movie planet circuit, city: milan], [3. name: multicinema milan, chain: multicinema circuit, city: milan]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "i want chain UCI Cinema global",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 30,
+                                "value": "UCI Cinema global",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "ok. there are more than one theater with chain uci cinema global. here: [1. name: uci cinema trento, chain: uci cinema global, city: trento], [2. name: uci cinema pesaro, chain: uci cinema global, city: pesaro], [3. name: uci cinema genova, chain: uci cinema global, city: genova]."
+                    },
+                    "user": {
+                        "text": "can you tell me the 3rd's address thanks",
+                        "intent": "ask_theater::address",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "the theater [name: uci cinema genova, chain: uci cinema global, city: genova] address is the following: via luca galli 18. is this theater what you were looking for? [1. name: uci cinema genova, chain: uci cinema global, city: genova]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "can you show me the available date?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "you can choose between: november 09"
+                    },
+                    "user": {
+                        "text": "i prefer date November 09",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 14,
+                                "end": 25,
+                                "value": "November 09",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "alright. is this screening what you were looking for? [1. time: 10 am, date: november 09]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "i wanted 5 please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 9,
+                                "end": 10,
+                                "value": "5",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "which ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "i would like 2 number of kids",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 14,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "which ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "on second thought, find actor James Stewart instead movies please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 30,
+                                "end": 43,
+                                "value": "James Stewart",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 20,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor james stewart. which movie's title"
+                    },
+                    "user": {
+                        "text": "i would like to find Lady Gaga actor instead movies",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 21,
+                                "end": 30,
+                                "value": "Lady Gaga",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 21,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor lady gaga. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "find Claudia Cardinale actor instead movies thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 5,
+                                "end": 22,
+                                "value": "Claudia Cardinale",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 22,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor claudia cardinale. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "i want to find movies with Jason Flemyng actor instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 27,
+                                "end": 40,
+                                "value": "Jason Flemyng",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 23,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor jason flemyng. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "can you find movies with Edward Asner actor instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 25,
+                                "end": 37,
+                                "value": "Edward Asner",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 24,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor edward asner. which movie's title"
+                    },
+                    "user": {
+                        "text": "on second thought, find movies with actor Mustafa Kamel instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 42,
+                                "end": 55,
+                                "value": "Mustafa Kamel",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 25,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any movie with actor mustafa kamel. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "find movies with actor Anthony Perkins instead thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 23,
+                                "end": 38,
+                                "value": "Anthony Perkins",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 26,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: psycho, genre: horror, director: alfred hitchcock, actor: anthony perkins, rating: pg]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 27,
+                    "agent": {
+                        "text": "got it. let me save your preference. is this screening what you were looking for? [1. time: 10 am, date: november 09]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 28,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "Pino Di Fabbrizio customer name thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 17,
+                                "value": "Pino Di Fabbrizio",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 29,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that's it thank you",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 30,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "goodbye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "i need to insert a ticket purchase for movies having Denis Villeneuve",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 53,
+                                "end": 69,
+                                "value": "Denis Villeneuve",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. alright. is this movie what you were looking for? [1. title: incendies, genre: drama, director: denis villeneuve, actor: mustafa kamel, rating: r]."
+                    },
+                    "user": {
+                        "text": "no. can you look for movies with Akira Kurosawa director instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 33,
+                                "end": 47,
+                                "value": "Akira Kurosawa",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "understood. there are more than one movie with director akira kurosawa. here: [1. title: seven samurai, genre: adventure, director: akira kurosawa, actor: toshirô mifune, rating: pg-13], [2. title: rashomon, genre: crime, director: akira kurosawa, actor: toshirô mifune, rating: pg-13], [3. title: yojimbo, genre: action, director: akira kurosawa, actor: toshirô mifune, rating: r]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "no. on second thought, i need you to search David Lean instead movies",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 44,
+                                "end": 54,
+                                "value": "David Lean",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "got it. there are more than one movie with director david lean. here: [1. title: lawrence of arabia, genre: adventure, director: david lean, actor: peter o'toole, rating: pg-13], [2. title: the bridge on the river kwai, genre: adventure, director: david lean, actor: william holden, rating: r]."
+                    },
+                    "user": {
+                        "text": "you have to add a ticket purchase. number of kids 1 thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 50,
+                                "end": 51,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "there are more than one movie with director david lean. here: [1. title: lawrence of arabia, genre: adventure, director: david lean, actor: peter o'toole, rating: pg-13], [2. title: the bridge on the river kwai, genre: adventure, director: david lean, actor: william holden, rating: r]."
+                    },
+                    "user": {
+                        "text": "no. actually, i would like to look for director Terry George instead movies thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 48,
+                                "end": 60,
+                                "value": "Terry George",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: hotel rwanda, genre: biography, director: terry george, actor: don cheadle, rating: r]."
+                    },
+                    "user": {
+                        "text": "which screening's dates do you have with time 10 pm",
+                        "intent": "request_screening::date",
+                        "entities": [
+                            {
+                                "start": 46,
+                                "end": 51,
+                                "value": "10 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "ok. you can choose between: november 10, november 08, november 09, november 07, november 13 and more"
+                    },
+                    "user": {
+                        "text": "i'll have November 12 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 10,
+                                "end": 21,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: hotel rwanda, genre: biography, director: terry george, actor: don cheadle, rating: r]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "which screening's dates are there?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "you can choose between: november 12"
+                    },
+                    "user": {
+                        "text": "i'll go with November 12 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 24,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "got it. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "i would prefer to look for theaters with Genova city please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 41,
+                                "end": 47,
+                                "value": "Genova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with city genova. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "i want to find theaters with city Padova instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 34,
+                                "end": 40,
+                                "value": "Padova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with city padova. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "on second thought, find theaters with Trento instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 38,
+                                "end": 44,
+                                "value": "Trento",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with city trento. which theater's name"
+                    },
+                    "user": {
+                        "text": "actually, i would prefer to look for city Venezia instead theaters",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 42,
+                                "end": 49,
+                                "value": "Venezia",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "alright. is this theater what you were looking for? [1. name: amc cinema venezia, chain: amc cinema chain, city: venezia]."
+                    },
+                    "user": {
+                        "text": "yes please",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "got it. let me save your preference. is this screening what you were looking for? [1. time: 10 pm, date: november 12]."
+                    },
+                    "user": {
+                        "text": "yes please",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "i would prefer 6 thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 15,
+                                "end": 16,
+                                "value": "6",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "which ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "Marco Mancini customer name",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 13,
+                                "value": "Marco Mancini",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "goodbye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "i want to make a ticket purchase for Marco Mancini customer name thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 37,
+                                "end": 50,
+                                "value": "Marco Mancini",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. which movie's title"
+                    },
+                    "user": {
+                        "text": "can you search movies with Comedy genre thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 27,
+                                "end": 33,
+                                "value": "Comedy",
+                                "name": "movie::genre"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "ok. please tell me the movie's rating"
+                    },
+                    "user": {
+                        "text": "i want g rating please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 7,
+                                "end": 8,
+                                "value": "g",
+                                "name": "movie::rating"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "understood. there are more than one movie with genre comedy and rating g. here: [1. title: dr. strangelove or: how i learned to stop worrying and love the bomb, genre: comedy, director: stanley kubrick, actor: peter sellers, rating: g], [2. title: amélie, genre: comedy, director: jean-pierre jeunet, actor: audrey tautou, rating: g], [3. title: the sting, genre: comedy, director: george roy hill, actor: paul newman, rating: g]."
+                    },
+                    "user": {
+                        "text": "give me 2nd option",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 18,
+                                "value": "2",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "is this movie what you were looking for? [1. title: amélie, genre: comedy, director: jean-pierre jeunet, actor: audrey tautou, rating: g]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "i need you to look for theaters with AMC Cinema chain thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 37,
+                                "end": 53,
+                                "value": "AMC Cinema chain",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "got it. there are more than one theater with chain amc cinema chain. here: [1. name: amc cinema trento, chain: amc cinema chain, city: trento], [2. name: amc cinema padova, chain: amc cinema chain, city: padova], [3. name: amc cinema rimini, chain: amc cinema chain, city: rimini]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "i'll go with 1st",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 16,
+                                "value": "1",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "is this theater what you were looking for? [1. name: amc cinema trento, chain: amc cinema chain, city: trento]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "i would prefer November 08 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 15,
+                                "end": 26,
+                                "value": "November 08",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with date november 08. which screening's date"
+                    },
+                    "user": {
+                        "text": "alright. and do you have November 10 date instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 25,
+                                "end": 36,
+                                "value": "November 10",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with date november 10. which screening's date"
+                    },
+                    "user": {
+                        "text": "anything will do",
+                        "intent": "dontcare",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "understood. please tell me the screening's time"
+                    },
+                    "user": {
+                        "text": "i wanted 10 pm time thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 9,
+                                "end": 14,
+                                "value": "10 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "got it. is this screening what you were looking for? [1. time: 10 pm, date: november 13]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "number of tickets 3",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 18,
+                                "end": 19,
+                                "value": "3",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "number of kids 2",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 15,
+                                "end": 16,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "goodbye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "i need to make a ticket purchase. i wanted screenings with date November 12",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 64,
+                                "end": 75,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. ok. which movie's title"
+                    },
+                    "user": {
+                        "text": "on second thought, find November 14 date instead screenings",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 24,
+                                "end": 35,
+                                "value": "November 14",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "understood. which movie's title"
+                    },
+                    "user": {
+                        "text": "i need to search Fernando Meirelles director movies thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 17,
+                                "end": 35,
+                                "value": "Fernando Meirelles",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: city of god, genre: crime, director: fernando meirelles, actor: alexandre rodrigues, rating: pg]."
+                    },
+                    "user": {
+                        "text": "i want you to search screenings with 10 pm time thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 37,
+                                "end": 42,
+                                "value": "10 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: city of god, genre: crime, director: fernando meirelles, actor: alexandre rodrigues, rating: pg]."
+                    },
+                    "user": {
+                        "text": "you have to look for theaters with MultiCinema circuit please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 35,
+                                "end": 54,
+                                "value": "MultiCinema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any theater with chain multicinema circuit. is this movie what you were looking for? [1. title: city of god, genre: crime, director: fernando meirelles, actor: alexandre rodrigues, rating: pg]."
+                    },
+                    "user": {
+                        "text": "yes",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "got it. let me save your preference. which theater's name"
+                    },
+                    "user": {
+                        "text": "look for theaters with chain The Space Cinemas instead thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 29,
+                                "end": 46,
+                                "value": "The Space Cinemas",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "understood. is this theater what you were looking for? [1. name: the space cinema rimini, chain: the space cinemas, city: rimini]."
+                    },
+                    "user": {
+                        "text": "can you give me its address thanks",
+                        "intent": "ask_theater::address",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "the theater [name: the space cinema rimini, chain: the space cinemas, city: rimini] address is the following: viale giuseppe arselli 2. is this theater what you were looking for? [1. name: the space cinema rimini, chain: the space cinemas, city: rimini]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, i need you to search theaters with Circuito Cinema circuit chain instead thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 63,
+                                "end": 86,
+                                "value": "Circuito Cinema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "ok. is this theater what you were looking for? [1. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "got it. let me save your preference. is this screening what you were looking for? [1. time: 10 pm, date: november 14]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "make a ticket purchase for number of tickets 4 and number of kids 1 please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 45,
+                                "end": 46,
+                                "value": "4",
+                                "name": "ticket_purchase::number_of_tickets"
+                            },
+                            {
+                                "start": 66,
+                                "end": 67,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "which ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "i would prefer Federico Giannoni please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 15,
+                                "end": 32,
+                                "value": "Federico Giannoni",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "goodbye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "make a ticket purchase for theaters having city Genova please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 48,
+                                "end": 54,
+                                "value": "Genova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. ok. which movie's title"
+                    },
+                    "user": {
+                        "text": "i wanted to find Mystery genre movies",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 17,
+                                "end": 24,
+                                "value": "Mystery",
+                                "name": "movie::genre"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "got it. please tell me the movie's rating"
+                    },
+                    "user": {
+                        "text": "i wanted rating g thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 16,
+                                "end": 17,
+                                "value": "g",
+                                "name": "movie::rating"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "got it. there are more than one movie with genre mystery and rating g. here: [1. title: rear window, genre: mystery, director: alfred hitchcock, actor: james stewart, rating: g], [2. title: shutter island, genre: mystery, director: martin scorsese, actor: leonardo dicaprio, rating: g]."
+                    },
+                    "user": {
+                        "text": "can you show me the available theaters' cities?",
+                        "intent": "request_theater::city",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "you can choose between: genova"
+                    },
+                    "user": {
+                        "text": "give me Genova city",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 14,
+                                "value": "Genova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "ok. there are more than one movie with genre mystery and rating g. here: [1. title: rear window, genre: mystery, director: alfred hitchcock, actor: james stewart, rating: g], [2. title: shutter island, genre: mystery, director: martin scorsese, actor: leonardo dicaprio, rating: g]."
+                    },
+                    "user": {
+                        "text": "actor James Stewart",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 6,
+                                "end": 19,
+                                "value": "James Stewart",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: rear window, genre: mystery, director: alfred hitchcock, actor: james stewart, rating: g]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "got it. let me save your preference. there are more than one theater with city genova. here: [1. name: amc cinema genova, chain: amc cinema chain, city: genova], [2. name: multicinema genova, chain: multicinema circuit, city: genova], [3. name: uci cinema genova, chain: uci cinema global, city: genova]."
+                    },
+                    "user": {
+                        "text": "that won't do it. i wanted to search Milan city instead theaters thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 37,
+                                "end": 42,
+                                "value": "Milan",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "ok. there are more than one theater with city milan. here: [1. name: seenema milan, chain: seenema circuit, city: milan], [2. name: movie planet milan, chain: movie planet circuit, city: milan], [3. name: amc cinema milan, chain: amc cinema chain, city: milan]."
+                    },
+                    "user": {
+                        "text": "tell me the number three's address thanks",
+                        "intent": "ask_theater::address",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "the theater [name: amc cinema milan, chain: amc cinema chain, city: milan] address is the following: via antonio mancini 9. is this theater what you were looking for? [1. name: amc cinema milan, chain: amc cinema chain, city: milan]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, you have to look for theaters with Torino city instead thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 63,
+                                "end": 69,
+                                "value": "Torino",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "understood. there are more than one theater with city torino. here: [1. name: the space cinema torino, chain: the space cinemas, city: torino], [2. name: amc cinema torino, chain: amc cinema chain, city: torino], [3. name: movie planet torino, chain: movie planet circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "find city Genova instead theaters please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 10,
+                                "end": 16,
+                                "value": "Genova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "alright. there are more than one theater with city genova. here: [1. name: amc cinema genova, chain: amc cinema chain, city: genova], [2. name: multicinema genova, chain: multicinema circuit, city: genova], [3. name: uci cinema genova, chain: uci cinema global, city: genova]."
+                    },
+                    "user": {
+                        "text": "i prefer option 3",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 9,
+                                "end": 17,
+                                "value": "3",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "is this theater what you were looking for? [1. name: uci cinema genova, chain: uci cinema global, city: genova]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "can you show me the available screenings' times?",
+                        "intent": "request_screening::time",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "you can choose between: 10 pm, 4 pm"
+                    },
+                    "user": {
+                        "text": "i'll go with 4 pm time",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 17,
+                                "value": "4 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "alright. which screening's date"
+                    },
+                    "user": {
+                        "text": "which screening's dates are there?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "you can choose between: november 12"
+                    },
+                    "user": {
+                        "text": "i want November 12 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 7,
+                                "end": 18,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "got it. is this screening what you were looking for? [1. time: 4 pm, date: november 12]."
+                    },
+                    "user": {
+                        "text": "yes please",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "2 number of tickets please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 1,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "i would like 1 please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 14,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 20,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "i want customer name Lucia Pozzan please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 21,
+                                "end": 33,
+                                "value": "Lucia Pozzan",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 21,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that's it thank you",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 22,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "goodbye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "can you insert a ticket purchase. i need theaters with UCI Cinema global thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 55,
+                                "end": 72,
+                                "value": "UCI Cinema global",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. alright. which movie's title"
+                    },
+                    "user": {
+                        "text": "which movie's titles are there?",
+                        "intent": "request_movie::title",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "you can choose between: the shawshank redemption, the godfather, the godfather: part ii, the dark knight, 12 angry men and more"
+                    },
+                    "user": {
+                        "text": "title Some Like It Hot",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 6,
+                                "end": 22,
+                                "value": "Some Like It Hot",
+                                "name": "movie::title"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: some like it hot, genre: comedy, director: billy wilder, actor: marilyn monroe, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "could you give me its plot please",
+                        "intent": "ask_movie::plot",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "the movie [title: some like it hot, genre: comedy, director: billy wilder, actor: marilyn monroe, rating: pg-13] plot is the following: when two chicago musicians, joe and jerry, witness the the st. valentine's day massacre, they want to get out of town and get away from the gangster responsible, spats colombo. they're desperate to get a gig out of town but the only job they know of is in an all-girl band heading to florida. they show up at the train station as josephine and daphne, the replacement saxophone and bass players. they certainly enjoy being around the girls, especially sugar kane kowalczyk who sings and plays the ukulele. joe in particular sets out to woo her while jerry/daphne is wooed by a millionaire, osgood fielding iii. mayhem ensues as the two men try to keep their true identities hidden and spats colombo and his crew show up for a meeting with several other crime lords.. is this movie what you were looking for? [1. title: some like it hot, genre: comedy, director: billy wilder, actor: marilyn monroe, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "yes",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "got it. let me save your preference. there are more than one theater with chain uci cinema global. here: [1. name: uci cinema trento, chain: uci cinema global, city: trento], [2. name: uci cinema milan, chain: uci cinema global, city: milan], [3. name: uci cinema padova, chain: uci cinema global, city: padova]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "that won't do it. can you search chain AMC Cinema chain instead theaters please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 39,
+                                "end": 55,
+                                "value": "AMC Cinema chain",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "understood. there are more than one theater with chain amc cinema chain. here: [1. name: amc cinema milan, chain: amc cinema chain, city: milan], [2. name: amc cinema rimini, chain: amc cinema chain, city: rimini], [3. name: amc cinema torino, chain: amc cinema chain, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "actually, i would like to look for chain Seenema circuit instead theaters thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 41,
+                                "end": 56,
+                                "value": "Seenema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "understood. there are more than one theater with chain seenema circuit. here: [1. name: seenema milan, chain: seenema circuit, city: milan], [2. name: seenema padova, chain: seenema circuit, city: padova], [3. name: seenema rimini, chain: seenema circuit, city: rimini]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "say that again?",
+                        "intent": "ask_to_repeat",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "i said:  got it. there are more than one theater with chain seenema circuit. here: [1. name: seenema milan, chain: seenema circuit, city: milan], [2. name: seenema padova, chain: seenema circuit, city: padova], [3. name: seenema rimini, chain: seenema circuit, city: rimini]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me more options",
+                        "intent": "ask_more_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "there are more than one theater with chain seenema circuit. here: [1. name: seenema milan, chain: seenema circuit, city: milan], [2. name: seenema padova, chain: seenema circuit, city: padova], [3. name: seenema rimini, chain: seenema circuit, city: rimini]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me the previous options",
+                        "intent": "ask_prev_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "there are no previous results in your navigation history. there are more than one theater with chain seenema circuit. here: [1. name: seenema milan, chain: seenema circuit, city: milan], [2. name: seenema padova, chain: seenema circuit, city: padova], [3. name: seenema rimini, chain: seenema circuit, city: rimini]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "i'll have 1st",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 10,
+                                "end": 13,
+                                "value": "1",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "is this theater what you were looking for? [1. name: seenema milan, chain: seenema circuit, city: milan]."
+                    },
+                    "user": {
+                        "text": "which theater's chains are there?",
+                        "intent": "request_theater::chain",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "you can choose between: seenema circuit"
+                    },
+                    "user": {
+                        "text": "i'll have chain Seenema circuit",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 16,
+                                "end": 31,
+                                "value": "Seenema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "understood. is this theater what you were looking for? [1. name: seenema milan, chain: seenema circuit, city: milan]."
+                    },
+                    "user": {
+                        "text": "which theater's chains are there?",
+                        "intent": "request_theater::chain",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "you can choose between: seenema circuit"
+                    },
+                    "user": {
+                        "text": "Seenema circuit chain",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 15,
+                                "value": "Seenema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "alright. is this theater what you were looking for? [1. name: seenema milan, chain: seenema circuit, city: milan]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, i want to find Movie Planet circuit chain instead theaters please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 43,
+                                "end": 63,
+                                "value": "Movie Planet circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "got it. there are more than one theater with chain movie planet circuit. here: [1. name: movie planet trento, chain: movie planet circuit, city: trento], [2. name: movie planet milan, chain: movie planet circuit, city: milan], [3. name: movie planet padova, chain: movie planet circuit, city: padova]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me the previous options",
+                        "intent": "ask_prev_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "there are no previous results in your navigation history. there are more than one theater with chain movie planet circuit. here: [1. name: movie planet trento, chain: movie planet circuit, city: trento], [2. name: movie planet milan, chain: movie planet circuit, city: milan], [3. name: movie planet padova, chain: movie planet circuit, city: padova]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "no. on second thought, i want you to find theaters with chain The Space Cinemas instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 62,
+                                "end": 79,
+                                "value": "The Space Cinemas",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "ok. there are more than one theater with chain the space cinemas. here: [1. name: the space cinema rimini, chain: the space cinemas, city: rimini], [2. name: the space cinema torino, chain: the space cinemas, city: torino], [3. name: the space cinema riccione, chain: the space cinemas, city: riccione]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me the previous options",
+                        "intent": "ask_prev_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "there are no previous results in your navigation history. there are more than one theater with chain the space cinemas. here: [1. name: the space cinema rimini, chain: the space cinemas, city: rimini], [2. name: the space cinema torino, chain: the space cinemas, city: torino], [3. name: the space cinema riccione, chain: the space cinemas, city: riccione]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "i want option 1",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 7,
+                                "end": 15,
+                                "value": "1",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 20,
+                    "agent": {
+                        "text": "is this theater what you were looking for? [1. name: the space cinema rimini, chain: the space cinemas, city: rimini]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 21,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "i would prefer date November 13",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 20,
+                                "end": 31,
+                                "value": "November 13",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 22,
+                    "agent": {
+                        "text": "understood. which screening's time"
+                    },
+                    "user": {
+                        "text": "any suggestion?",
+                        "intent": "request_screening::time",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 23,
+                    "agent": {
+                        "text": "you can choose between: 10 pm, 4 pm"
+                    },
+                    "user": {
+                        "text": "i'll go with 4 pm time",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 17,
+                                "value": "4 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 24,
+                    "agent": {
+                        "text": "ok. is this screening what you were looking for? [1. time: 4 pm, date: november 13]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 25,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "i would prefer 6 number of tickets thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 15,
+                                "end": 16,
+                                "value": "6",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 26,
+                    "agent": {
+                        "text": "which ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "1 number of kids please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 1,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 27,
+                    "agent": {
+                        "text": "which ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "customer name Giuliano Tortoreto please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 14,
+                                "end": 32,
+                                "value": "Giuliano Tortoreto",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 28,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 29,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "bye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "add a ticket purchase. screenings with time 4 pm please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 44,
+                                "end": 48,
+                                "value": "4 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. understood. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "i would like to find movies with Martina Gedeck actor thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 33,
+                                "end": 47,
+                                "value": "Martina Gedeck",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: the lives of others, genre: drama, director: florian henckel von donnersmarck, actor: martina gedeck, rating: pg]."
+                    },
+                    "user": {
+                        "text": "can you show me the available movies' actors?",
+                        "intent": "request_movie::actor",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "you can choose between: martina gedeck"
+                    },
+                    "user": {
+                        "text": "give me Martina Gedeck actor",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 22,
+                                "value": "Martina Gedeck",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: the lives of others, genre: drama, director: florian henckel von donnersmarck, actor: martina gedeck, rating: pg]."
+                    },
+                    "user": {
+                        "text": "which dates are there for screenings that have 10 am time",
+                        "intent": "request_screening::date",
+                        "entities": [
+                            {
+                                "start": 47,
+                                "end": 52,
+                                "value": "10 am",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "alright. you can choose between: november 12, november 08, november 14, november 10, november 09 and more"
+                    },
+                    "user": {
+                        "text": "i would like to search city Genova theaters",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 28,
+                                "end": 34,
+                                "value": "Genova",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: the lives of others, genre: drama, director: florian henckel von donnersmarck, actor: martina gedeck, rating: pg]."
+                    },
+                    "user": {
+                        "text": "no. can you find movies with Ralph Fiennes actor instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 29,
+                                "end": 42,
+                                "value": "Ralph Fiennes",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: the grand budapest hotel, genre: adventure, director: wes anderson, actor: ralph fiennes, rating: r]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "got it. let me save your preference. there are more than one theater with city genova. here: [1. name: multicinema genova, chain: multicinema circuit, city: genova], [2. name: circuito cinema genova, chain: circuito cinema circuit, city: genova]."
+                    },
+                    "user": {
+                        "text": "no. i would like to look for theaters with Roma city instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 43,
+                                "end": 47,
+                                "value": "Roma",
+                                "name": "theater::city"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "ok. is this theater what you were looking for? [1. name: movie planet roma, chain: movie planet circuit, city: roma]."
+                    },
+                    "user": {
+                        "text": "sure",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "help me choose one?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "you can choose between: november 09"
+                    },
+                    "user": {
+                        "text": "i want November 09 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 7,
+                                "end": 18,
+                                "value": "November 09",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "understood. is this screening what you were looking for? [1. time: 10 am, date: november 09]."
+                    },
+                    "user": {
+                        "text": "no. i want you to find November 10 date instead screenings thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 23,
+                                "end": 34,
+                                "value": "November 10",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with time 10 am and date november 10. which screening's date"
+                    },
+                    "user": {
+                        "text": "anything will do",
+                        "intent": "dontcare",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "got it. is this screening what you were looking for? [1. time: 10 am, date: november 09]."
+                    },
+                    "user": {
+                        "text": "yes",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "i wanted number of tickets 7",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 27,
+                                "end": 28,
+                                "value": "7",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "which ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "1",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 1,
+                                "value": "1",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "i need Phil Frank customer name",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 7,
+                                "end": 17,
+                                "value": "Phil Frank",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "bye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "i want to make a ticket purchase. 6 number of tickets Phil Frank thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 34,
+                                "end": 35,
+                                "value": "6",
+                                "name": "ticket_purchase::number_of_tickets"
+                            },
+                            {
+                                "start": 54,
+                                "end": 64,
+                                "value": "Phil Frank",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. please tell me the movie's title"
+                    },
+                    "user": {
+                        "text": "i would prefer to find movies with Damián Szifron director",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 35,
+                                "end": 49,
+                                "value": "Damián Szifron",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: wild tales, genre: comedy, director: damián szifron, actor: darío grandinetti, rating: pg]."
+                    },
+                    "user": {
+                        "text": "which theater's chains are there?",
+                        "intent": "request_theater::chain",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "you can choose between: uci cinema global, amc cinema chain, seenema circuit, movie planet circuit, multicinema circuit and more"
+                    },
+                    "user": {
+                        "text": "i want chain Circuito Cinema circuit",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 36,
+                                "value": "Circuito Cinema circuit",
+                                "name": "theater::chain"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: wild tales, genre: comedy, director: damián szifron, actor: darío grandinetti, rating: pg]."
+                    },
+                    "user": {
+                        "text": "on second thought, i want you to add a ticket purchase for 2 number of tickets instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 59,
+                                "end": 60,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "is this movie what you were looking for? [1. title: wild tales, genre: comedy, director: damián szifron, actor: darío grandinetti, rating: pg]."
+                    },
+                    "user": {
+                        "text": "on second thought, make a ticket purchase for customer name Giuliano Tortoreto instead and number of kids 2 and number of tickets 3 instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 60,
+                                "end": 78,
+                                "value": "Giuliano Tortoreto",
+                                "name": "ticket_purchase::customer_name"
+                            },
+                            {
+                                "start": 106,
+                                "end": 107,
+                                "value": "2",
+                                "name": "ticket_purchase::number_of_kids"
+                            },
+                            {
+                                "start": 130,
+                                "end": 131,
+                                "value": "3",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "is this movie what you were looking for? [1. title: wild tales, genre: comedy, director: damián szifron, actor: darío grandinetti, rating: pg]."
+                    },
+                    "user": {
+                        "text": "no. i would prefer to find movies with director Damien Chazelle instead thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 48,
+                                "end": 63,
+                                "value": "Damien Chazelle",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "got it. is this movie what you were looking for? [1. title: whiplash, genre: drama, director: damien chazelle, actor: miles teller, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "can you give me its cast please",
+                        "intent": "ask_movie::cast",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "the movie [title: whiplash, genre: drama, director: damien chazelle, actor: miles teller, rating: pg-13] cast is the following: miles teller, j.k. simmons, paul reiser, melissa benoist, austin stowell. is this movie what you were looking for? [1. title: whiplash, genre: drama, director: damien chazelle, actor: miles teller, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, find Rajkumar Hirani director instead movies",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 33,
+                                "end": 48,
+                                "value": "Rajkumar Hirani",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: 3 idiots, genre: comedy, director: rajkumar hirani, actor: aamir khan, rating: pg]."
+                    },
+                    "user": {
+                        "text": "that won't do it. search movies with Michel Gondry director instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 37,
+                                "end": 50,
+                                "value": "Michel Gondry",
+                                "name": "movie::director"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: eternal sunshine of the spotless mind, genre: drama, director: michel gondry, actor: jim carrey, rating: pg]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "got it. let me save your preference. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "come again?",
+                        "intent": "ask_to_repeat",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "i said: got it. let me save your preference. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "i'll go with 3rd",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 13,
+                                "end": 16,
+                                "value": "3",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "ok. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me the first options",
+                        "intent": "ask_head_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "gotcha, let me load the first options for you. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them. if you want to see previous results, or the first results of the list, just ask me."
+                    },
+                    "user": {
+                        "text": "show me the previous options",
+                        "intent": "ask_prev_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "ok, let me load previous results. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them."
+                    },
+                    "user": {
+                        "text": "show me more options",
+                        "intent": "ask_more_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "alright, let me load more results. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema pesaro, chain: circuito cinema circuit, city: pesaro], [2. name: circuito cinema roma, chain: circuito cinema circuit, city: roma], [3. name: circuito cinema firenze, chain: circuito cinema circuit, city: firenze]. there are also other results matching your criteria. ask me to show you more if you want to see them. if you want to see previous results, or the first results of the list, just ask me."
+                    },
+                    "user": {
+                        "text": "show me the first options",
+                        "intent": "ask_head_options",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "gotcha, let me load the first options for you. there are more than one theater with chain circuito cinema circuit. here: [1. name: circuito cinema padova, chain: circuito cinema circuit, city: padova], [2. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini], [3. name: circuito cinema torino, chain: circuito cinema circuit, city: torino]. there are also other results matching your criteria. ask me to show you more if you want to see them. if you want to see previous results, or the first results of the list, just ask me."
+                    },
+                    "user": {
+                        "text": "give me option 2",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 16,
+                                "value": "2",
+                                "name": "user_choice"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "is this theater what you were looking for? [1. name: circuito cinema rimini, chain: circuito cinema circuit, city: rimini]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "can you show me the available date?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 20,
+                    "agent": {
+                        "text": "you can choose between: november 12"
+                    },
+                    "user": {
+                        "text": "November 12 date",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 11,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 21,
+                    "agent": {
+                        "text": "understood. please tell me the screening's time"
+                    },
+                    "user": {
+                        "text": "10 am time please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 5,
+                                "value": "10 am",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 22,
+                    "agent": {
+                        "text": "unfortunately, i couldn't find any screening with time 10 am and date november 12. please tell me the screening's time"
+                    },
+                    "user": {
+                        "text": "help me choose one?",
+                        "intent": "request_screening::time",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 23,
+                    "agent": {
+                        "text": "you can choose between: 10 pm, 4 pm"
+                    },
+                    "user": {
+                        "text": "i'll go with time 4 pm instead",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 18,
+                                "end": 22,
+                                "value": "4 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 24,
+                    "agent": {
+                        "text": "ok. is this screening what you were looking for? [1. time: 4 pm, date: november 12]."
+                    },
+                    "user": {
+                        "text": "yes please",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 25,
+                    "agent": {
+                        "text": "got it. let me save your preference. i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that's it thank you",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 26,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "bye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "turns": [
+                {
+                    "number": 0,
+                    "agent": {
+                        "text": "hello, how can i help you?"
+                    },
+                    "user": {
+                        "text": "i need you to insert a ticket purchase. movies with actor Malcolm McDowell please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 58,
+                                "end": 74,
+                                "value": "Malcolm McDowell",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 1,
+                    "agent": {
+                        "text": "ok, so you want to make a ticket purchase. got it. is this movie what you were looking for? [1. title: a clockwork orange, genre: crime, director: stanley kubrick, actor: malcolm mcdowell, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "any suggestion for a movie's actor?",
+                        "intent": "request_movie::actor",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 2,
+                    "agent": {
+                        "text": "you can choose between: malcolm mcdowell"
+                    },
+                    "user": {
+                        "text": "any suggestion for a theater's name?",
+                        "intent": "request_theater::name",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 3,
+                    "agent": {
+                        "text": "you can choose between: spaziocinema trento, uci cinema trento, amc cinema trento, seenema milan, movie planet milan and more"
+                    },
+                    "user": {
+                        "text": "which movie's actors are there?",
+                        "intent": "request_movie::actor",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 4,
+                    "agent": {
+                        "text": "you can choose between: malcolm mcdowell"
+                    },
+                    "user": {
+                        "text": "i prefer Malcolm McDowell actor",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 9,
+                                "end": 25,
+                                "value": "Malcolm McDowell",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 5,
+                    "agent": {
+                        "text": "understood. is this movie what you were looking for? [1. title: a clockwork orange, genre: crime, director: stanley kubrick, actor: malcolm mcdowell, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "that won't do it. on second thought, find movies with actor Jürgen Prochnow instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 60,
+                                "end": 75,
+                                "value": "Jürgen Prochnow",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 6,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: das boot, genre: adventure, director: wolfgang petersen, actor: jürgen prochnow, rating: pg-13]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, i would like to find movies with Ralph Fiennes actor instead please",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 61,
+                                "end": 74,
+                                "value": "Ralph Fiennes",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 7,
+                    "agent": {
+                        "text": "ok. is this movie what you were looking for? [1. title: the grand budapest hotel, genre: adventure, director: wes anderson, actor: ralph fiennes, rating: r]."
+                    },
+                    "user": {
+                        "text": "that won't do it. actually, find actor Jeff Bridges instead movies",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 39,
+                                "end": 51,
+                                "value": "Jeff Bridges",
+                                "name": "movie::actor"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 8,
+                    "agent": {
+                        "text": "alright. is this movie what you were looking for? [1. title: the big lebowski, genre: comedy, director: joel coen, actor: jeff bridges, rating: pg]."
+                    },
+                    "user": {
+                        "text": "yes",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 9,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the theater's name"
+                    },
+                    "user": {
+                        "text": "help me choose one?",
+                        "intent": "request_theater::name",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 10,
+                    "agent": {
+                        "text": "you can choose between: spaziocinema trento, uci cinema trento, movie planet trento, amc cinema trento, movie planet milan and more"
+                    },
+                    "user": {
+                        "text": "give me AMC Cinema Padova",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 25,
+                                "value": "AMC Cinema Padova",
+                                "name": "theater::name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 11,
+                    "agent": {
+                        "text": "ok. is this theater what you were looking for? [1. name: amc cinema padova, chain: amc cinema chain, city: padova]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 12,
+                    "agent": {
+                        "text": "got it. let me save your preference. please tell me the screening's date"
+                    },
+                    "user": {
+                        "text": "come again?",
+                        "intent": "ask_to_repeat",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 13,
+                    "agent": {
+                        "text": "i said: got it. let me save your preference. which screening's date"
+                    },
+                    "user": {
+                        "text": "which screening's dates are there?",
+                        "intent": "request_screening::date",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 14,
+                    "agent": {
+                        "text": "you can choose between: november 12"
+                    },
+                    "user": {
+                        "text": "i'll go with date November 12",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 18,
+                                "end": 29,
+                                "value": "November 12",
+                                "name": "screening::date"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 15,
+                    "agent": {
+                        "text": "alright. which screening's time"
+                    },
+                    "user": {
+                        "text": "which screening's times are there?",
+                        "intent": "request_screening::time",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 16,
+                    "agent": {
+                        "text": "you can choose between: 10 pm"
+                    },
+                    "user": {
+                        "text": "give me 10 pm time",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 8,
+                                "end": 13,
+                                "value": "10 pm",
+                                "name": "screening::time"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 17,
+                    "agent": {
+                        "text": "understood. is this screening what you were looking for? [1. time: 10 pm, date: november 12]."
+                    },
+                    "user": {
+                        "text": "could you give me its room thanks",
+                        "intent": "ask_screening::room",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 18,
+                    "agent": {
+                        "text": "the screening [time: 10 pm, date: november 12] room is the following: a. is this screening what you were looking for? [1. time: 10 pm, date: november 12]."
+                    },
+                    "user": {
+                        "text": "yes thank you",
+                        "intent": "affirm",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 19,
+                    "agent": {
+                        "text": "got it. let me save your preference. which ticket purchase's number of tickets"
+                    },
+                    "user": {
+                        "text": "number of tickets 7",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 18,
+                                "end": 19,
+                                "value": "7",
+                                "name": "ticket_purchase::number_of_tickets"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 20,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's number of kids"
+                    },
+                    "user": {
+                        "text": "i would like number of kids 0",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 28,
+                                "end": 29,
+                                "value": "0",
+                                "name": "ticket_purchase::number_of_kids"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 21,
+                    "agent": {
+                        "text": "please tell me the ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "say that again?",
+                        "intent": "ask_to_repeat",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 22,
+                    "agent": {
+                        "text": "i said: please tell me the ticket purchase's customer name"
+                    },
+                    "user": {
+                        "text": "Federico Giannoni customer name thanks",
+                        "intent": "inform",
+                        "entities": [
+                            {
+                                "start": 0,
+                                "end": 17,
+                                "value": "Federico Giannoni",
+                                "name": "ticket_purchase::customer_name"
+                            }
+                        ]
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 23,
+                    "agent": {
+                        "text": "i have registered your ticket purchase. now, is there anything else i can help you with, or should i finalize?"
+                    },
+                    "user": {
+                        "text": "that is it",
+                        "intent": "thatsit",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                },
+                {
+                    "number": 24,
+                    "agent": {
+                        "text": "goodbye"
+                    },
+                    "user": {
+                        "text": "bye",
+                        "intent": "goodbye",
+                        "entities": []
+                    },
+                    "turk": {
+                        "paraphrases": []
+                    }
+                }
+            ]
+        }
+    ]
+}

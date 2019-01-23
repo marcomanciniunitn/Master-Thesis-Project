@@ -1,0 +1,19 @@
+{
+    "tot_hours": "0",
+    "tot_minutes": "0",
+    "tot_seconds": "50.477",
+    "interation_hours": "0",
+    "interation_minutes": "0",
+    "interation_seconds": "43.171",
+    "turn_check_hours": "0",
+    "turn_check_minutes": "0",
+    "turn_check_seconds": "3.352",
+    "error_selection_hours": "0",
+    "error_selection_minutes": "0",
+    "error_selection_seconds": "3.954",
+    "user_id": "user_36",
+    "turns": 6,
+    "outcome": "ERRONEOUS",
+    "error_type": "DM",
+    "task_category": "FULL"
+}
